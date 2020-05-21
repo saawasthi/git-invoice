@@ -1,0 +1,14 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="comp.SAwebapp.controller.Tile"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>tilePageTitle}" showNavButton="true" navButtonPress="onNavBack">
+		<headerContent>
+			<Button icon="sap-icon://log" press="onLogOut" class="sapUiSmallMarginEnd"/>
+		</headerContent>
+		<!--<mvc:XMLView viewName="comp.SAwebapp.view.Panel"/>-->
+		<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Invoice List" subheader="Order" press="onTileInvoice">
+			<TileContent unit="INR" footer="INVOICE">
+				<ImageContent src="sap-icon://detail-view"/>
+			</TileContent>
+		</GenericTile>
+	</Page>
+</mvc:View>

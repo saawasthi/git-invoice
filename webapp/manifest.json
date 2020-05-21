@@ -1,0 +1,173 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "comp.SAwebapp",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		},
+		"dataSources": {
+			"invoiceRemote": {
+				"uri": "/destinations/northwind/V2/Northwind/Northwind.svc/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "comp.SAwebapp.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "App"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "comp.SAwebapp.i18n.i18n"
+				}
+			},
+			"invoice": {
+				"dataSource": "invoiceRemote"
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "comp.SAwebapp.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false,
+				"bypassed": {
+					"target": "notFound"
+				}
+			},
+			"routes": [{
+				"name": "RouteApp",
+				"pattern": "RouteApp",
+				"target": [
+					"TargetApp"
+				]
+			}, {
+				"pattern": "",
+				"name": "login",
+				"target": "login"
+			}, {
+				"pattern": "login",
+				"name": "Tile",
+				"target": "Tile"
+			}, {
+				"pattern": "Tile",
+				"name": "overview",
+				"target": "overview"
+			}, {
+				"pattern": "detail/{invoicePath}",
+				"name": "detail",
+				"target": "detail"
+			}, {
+				"pattern": "OrderDetail/{invoicePathDetail}",
+				"name": "OrderDetail",
+				"target": "OrderDetail"
+			}, {
+				"pattern": "Shipment/{invoicePathDetail}",
+				"name": "Shipment",
+				"target": "Shipment"
+			}],
+			"targets": {
+				"TargetApp": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App",
+					"viewName": "App"
+				},
+				"Panel": {
+					"viewType": "XML",
+					"viewName": "Panel"
+				},
+				"Invoice": {
+					"viewType": "XML",
+					"viewName": "Invoice"
+				},
+				"overview": {
+					"viewId": "overview",
+					"viewName": "Overview"
+				},
+				"detail": {
+					"viewId": "detail",
+					"viewName": "Detail"
+				},
+				"login": {
+					"viewType": "XML",
+					"viewName": "Login"
+				},
+				"Tile": {
+					"viewType": "XML",
+					"viewName": "Tile"
+				},
+				"OrderDetail": {
+					"viewType": "XML",
+					"viewName": "OrderDetail"
+				},
+				"Shipment": {
+					"viewType": "XML",
+					"viewName": "Shipment"
+				},
+				"notFound": {
+					"viewName": "NotFound",
+					"transition": "show"
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}

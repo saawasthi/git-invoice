@@ -1,0 +1,19 @@
+<mvc:View controllerName="comp.SAwebapp.controller.App" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+	<Shell>
+		<App class="saurabhApp" id="app">
+			<!--<pages>-->
+			<!--	<Page title="{i18n>homePageTitle}">-->
+			<!--		<headerContent>-->
+			<!--			<Button icon="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2015/08/popupads-1200x610.jpg" press="onOpenDialog"-->
+			<!--				class="sapUiSmallMarginEnd"/>-->
+			<!--		</headerContent>-->
+					<!--Nested View : Panel view within the app view-->
+			<!--		<content>-->
+			<!--			<mvc:XMLView viewName="comp.SAwebapp.view.Panel"/>-->
+			<!--			<mvc:XMLView viewName="comp.SAwebapp.view.Invoice"/>-->
+			<!--		</content>-->
+			<!--	</Page>-->
+			<!--</pages>-->
+		</App>
+	</Shell>
+</mvc:View>

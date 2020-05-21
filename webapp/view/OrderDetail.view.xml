@@ -1,0 +1,35 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+	controllerName="comp.SAwebapp.controller.OrderDetail" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:wt="comp.SAwebapp.Control">
+	<Page title="{i18n>detailOrder}" showNavButton="true" navButtonPress="onNavBack">
+		<headerContent>
+			<Button icon="sap-icon://log" press="onLogOut" class="sapUiSmallMarginEnd"/>
+		</headerContent>
+		<ObjectHeader responsive="true" fullScreenOptimized="true" intro="{invoice>ShipperName}" title="{invoice>ProductName}"/>
+		<Panel headerText="Order Details">
+			<content>
+				<f:SimpleForm minWidth="1024" editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4"
+					columnsL="1" columnsM="1">
+					<f:content>
+						<Label text="OrderID"/>
+						<Text text="{invoice>OrderID}"/>
+						<Label text="OrderDate"/>
+						<Text text="{invoice>OrderDate}"/>
+						<Label text="RequiredDate"/>
+						<Text text="{invoice>RequiredDate}"/>
+						<Label text="ProductID"/>
+						<Text text="{invoice>ProductID}"/>
+						<Label text="UnitPrice"/>
+						<Text text="{invoice>UnitPrice} {view>/currency}"/>
+						<Label text="Quantity"/>
+						<Text text="{invoice>Quantity}"/>
+						<Label text="ExtendedPrice"/>
+						<Text text="{invoice>ExtendedPrice} {view>/currency}"/>
+					</f:content>
+				</f:SimpleForm>
+			</content>
+		</Panel>
+		<Panel headerText="Product Rating">
+			<wt:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change="onRatingChange"/>
+		</Panel>
+	</Page>
+</mvc:View>

@@ -1,0 +1,19 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+	controllerName="comp.SAwebapp.controller.Login" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Login Page" showHeader="true" class="w3-backGround" enableScrolling="false" showNavButton="true" navButtonPress="onNavBack">
+				<content>
+					<VBox height="70%" justifyContent="Center" alignItems="Center">
+						<Image src="https://cdn.pixabay.com/photo/2018/03/24/21/26/user-3257935_1280.jpg" width="13%" class="loginImg"/>
+						<Text text="Please fill your login details" textAlign="Center" class="loginText"/>
+						<Input id="userid" value="" placeholder="User name" liveChange="true" width="100%"/>
+						<Input id="password" value="" type="Password" placeholder="Password" width="100%" class="w3-input w3-border-0 w3-round-medium"/>
+						<!--	<Button class="w3-btn w3-ripple w3-border-0 w3-round-large" text="Login" press="navigatePage"/>-->
+						<Button icon="sap-icon://initiative" text="Login" type="Emphasized" press="navigatePage"/>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

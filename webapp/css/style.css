@@ -1,0 +1,42 @@
+/* Enter your custom styles here */
+
+.saurabhApp .myCustomButton.sapMBtn {
+    margin-right: 1.0rem;
+}
+
+.saurabhApp .myCustomText {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.myAppProductRating {
+    padding: 0.75rem;
+}
+
+.myAppProductRating .sapMRI {
+    vertical-align: initial;
+}
+
+.w3-backGround {
+    background-image: url("");
+}
+
+.login-header {
+    font-style: bold;
+    font-family: arial, sans-serif;
+    font-weight: 600;
+}
+
+.loginImg {
+    padding-left: 43.5%;
+}
+
+.loginText {
+    height: 10%;
+}
+
+.mail {
+    display: table-header-group;
+    font-size: larger;
+}

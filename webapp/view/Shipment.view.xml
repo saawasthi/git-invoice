@@ -1,0 +1,53 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+	controllerName="comp.SAwebapp.controller.Shipment">
+	<Page title="{i18n>detailShipment}" showNavButton="true" navButtonPress="onNavBack">
+		<headerContent>
+			<Button icon="sap-icon://log" press="onLogOut" class="sapUiSmallMarginEnd"/>
+		</headerContent>
+		<ObjectHeader responsive="true" fullScreenOptimized="true" intro="{invoice>ShipperName}" title="{invoice>ProductName}"/>
+		<Panel headerText="Shipment Details">
+			<f:SimpleForm minWidth="1024" editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4"
+				columnsL="1" columnsM="1">
+				<f:content>
+					<Label text="ShipName"/>
+					<Text text="{invoice>ShipName}"/>
+					<Label text="ShipAddress"/>
+					<Text text="{invoice>ShipAddress}"/>
+					<Label text="ShipCity"/>
+					<Text text="{invoice>ShipCity}"/>
+					<Label text="ShipRegion"/>
+					<Text text="{invoice>ShipRegion}"/>
+					<Label text="ShipPostalCode"/>
+					<Text text="{invoice>ShipPostalCode}"/>
+					<Label text="ShipCountry"/>
+					<Text text="{invoice>ShipCountry}"/>
+				</f:content>
+			</f:SimpleForm>
+		</Panel>
+		<Panel headerText="Customer Details">
+			<f:SimpleForm minWidth="1024" editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4"
+				columnsL="1" columnsM="1">
+				<f:content>
+					<Label text="CustomerID"/>
+					<Text text="{invoice>CustomerID}"/>
+					<Label text="CustomerName"/>
+					<Text text="{invoice>CustomerName}"/>
+					<Label text="Address"/>
+					<Text text="{invoice>Address}"/>
+					<Label text="City"/>
+					<Text text="{invoice>City}"/>
+					<Label text="Region"/>
+					<Text text="{invoice>Region}"/>
+					<Label text="PostalCode"/>
+					<Text text="{invoice>PostalCode}"/>
+					<Label text="Country"/>
+					<Text text="{invoice>Country}"/>
+				</f:content>
+			</f:SimpleForm>
+		</Panel>
+		<Panel>
+			<Link class="mail" href="{ parts: ['/recipient/firstName','/recipient/lastName'] , formatter: '.formatMail' }"
+				text="{i18n>sendEmail}" emphasized="true"/>
+		</Panel>
+	</Page>
+</mvc:View>

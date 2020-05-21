@@ -1,0 +1,12 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="comp.SAwebapp.controller.App"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showNavButton="true" navButtonPress="onNavBack" title="{i18n>homePageTitle}">
+		<headerContent>
+			<Button icon="sap-icon://log" press="onLogOut" class="sapUiSmallMarginEnd"/>
+		</headerContent>
+		<!--Nested View : Panel view within the app view-->
+		<content>
+			<mvc:XMLView viewName="comp.SAwebapp.view.Invoice"/>
+		</content>
+	</Page>
+</mvc:View>

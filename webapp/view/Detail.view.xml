@@ -1,0 +1,19 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="comp.SAwebapp.controller.Detail"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>detailPageTitle}" showNavButton="true" navButtonPress="onNavBack">
+		<headerContent>
+			<Button icon="sap-icon://log" press="onLogOut" class="sapUiSmallMarginEnd"/>
+		</headerContent>
+		<ObjectHeader responsive="true" fullScreenOptimized="true" title="Please select a tile"></ObjectHeader>
+		<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Item Detail" subheader="Item" press="onTileItem">
+			<TileContent>
+				<ImageContent src="sap-icon://activity-individual"/>
+			</TileContent>
+		</GenericTile>
+		<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Personal Detail" subheader="Person" press="onTilePersonal">
+			<TileContent>
+				<ImageContent src="sap-icon://toaster-top"/>
+			</TileContent>
+		</GenericTile>
+	</Page>
+</mvc:View>

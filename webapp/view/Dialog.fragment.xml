@@ -1,0 +1,10 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Dialog id="helloDialog" title="Baap Kon hai......???? SAURABH AWASTHI सौरभ अवस्थी ">
+		<content>
+			<core:Icon src="sap-icon://electrocardiogram" size="10rem" class="sapUiMediumMargin"/>
+		</content>
+		<beginButton>
+			<Button text="{i18n>closeDialogButtonText}" press="onCloseDialog"/>
+		</beginButton>
+	</Dialog>
+</core:FragmentDefinition>

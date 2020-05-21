@@ -1,0 +1,14 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="comp.SAwebapp.controller.Panel">
+	<Panel headerText="{i18n>homePageHeaderText}" class="sapUiResponsiveMargin" width="auto" expandable="{device>/system/phone}"
+		expanded="{= !${device>/system/phone} }">
+		<content>
+			<Button icon="https://sites.google.com/site/pressthebigredbuttoncomcom/_/rsrc/1479506280249/home/1357407.jpg" press="onHello"
+				class="myCustomButton"/>
+			<Text text="{i18n>firstName}" class="sapUiSmallMargin "/>
+			<Input value="{/recipient/firstName}" valueLiveUpdate="true" width="30%"/>
+			<Text text="{i18n>lastName}" class="sapUiSmallMargin "/>
+			<Input value="{/recipient/lastName}" valueLiveUpdate="true" width="30%"/>
+			<FormattedText htmlText="{/recipient/lastName}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+		</content>
+	</Panel>
+</mvc:View>
